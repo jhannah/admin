@@ -1,0 +1,28 @@
+<VirtualHost *:80>
+        ServerName usshoustondive.com
+        ServerAlias www.usshoustondive.com
+        ServerAlias dive.jays.net
+
+    ServerAdmin webmaster@localhost
+
+    DocumentRoot /var/www/usshoustondive.com
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory /var/www/usshoustondive.com>
+        Options All
+                AddHandler cgi-script .cgi .pl
+        AllowOverride None
+        Order allow,deny
+        allow from all
+    </Directory>
+
+    ErrorLog /var/log/apache2/error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog /var/log/apache2/access.log combined
+</VirtualHost>

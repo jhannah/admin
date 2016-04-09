@@ -1,0 +1,32 @@
+<VirtualHost *:80>
+        ServerName jays.net
+        ServerAlias www.jays.net
+        ServerAlias new.jays.net
+
+    ServerAdmin webmaster@localhost
+
+    DocumentRoot /var/www/jays.net
+    <Directory />
+        Options FollowSymLinks
+        AllowOverride None
+    </Directory>
+    <Directory /var/www/jays.net>
+        Options All
+                AddHandler cgi-script .cgi .pl
+        AllowOverride None
+        Order allow,deny
+        allow from all
+
+                AddType text/html .shtml
+                AddOutputFilter INCLUDES .shtml
+                DirectoryIndex index.html index.shtml
+    </Directory>
+
+    ErrorLog /var/log/apache2/error.log
+
+    # Possible values include: debug, info, notice, warn, error, crit,
+    # alert, emerg.
+    LogLevel warn
+
+    CustomLog /var/log/apache2/access.log combined
+</VirtualHost>
