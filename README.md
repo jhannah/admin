@@ -1,12 +1,17 @@
-| Site                  | Host    |
-| --------------------- | ------- |
-| jays.net              | Netlify |
-| tif.report            | Netlify |
-| ne.tif.report         | Netlify |
-| foodnotbombs.us       | Netlify |
-| omaha.foodnotbombs.us | Netlify |
-| usshoustondive.com    | Linode  |
-| rvtr.org              | Retired |
+| Domain                | Site           | Host                |
+| --------------------- | -------------- | ------------------- |
+| jays.net              |                | Linode 45.79.55.126 |
+|                       | podcasts       | YunoHost on Linode  |
+|                       | brotherbemused | Netlify             |
+| tif.report            |                | Linode 45.79.55.126 |
+|                       | ne / nebraska  | Netlify             |
+| foodnotbombs.us       |                | Linode 45.79.55.126 |
+|                       | omaha          | Netlify             |
+|                       | map            | Netlify             |
+|                       | edmonton       | Netlify (theirs)    |
+|                       | pdx            | Netlify (theirs)    |
+| usshoustondive.com    |                | Linode 45.79.55.126 |
+| rvtr.org              |                | Retired             |
 
 ```
 svn checkout https://github.com/jhannah/admin/trunk/jays.net/etc/apache2/sites-available
